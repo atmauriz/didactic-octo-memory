@@ -28,5 +28,5 @@ jobs:
       distributions: "sdist bdist_wheel"
       skip_existing: true
       on:
-        tags: false
+        tags: true
         branch: master
