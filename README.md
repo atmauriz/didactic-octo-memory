@@ -1,4 +1,4 @@
-# testfolder [![Travis](https://travis-ci.com/atmauriz/didactic-octo-memory.svg?branch=master&logo=travis)](https://travis-ci.com/atmauriz/didactic-octo-memory) [![GitHub tag](https://img.shields.io/github/tag/atmauriz/didactic-octo-memory.svg)](https://GitHub.com/atmauriz/didactic-octo-memory.js/tags/) [![GitHub commits](https://img.shields.io/github/commits-since/atmauriz/didactic-octo-memory/v0.0.1.svg)](https://GitHub.com/atmauriz/didactic-octo-memory/commit/)
+# testfolder [![Travis](https://travis-ci.com/atmauriz/didactic-octo-memory.svg?branch=master&logo=travis)](https://travis-ci.com/atmauriz/didactic-octo-memory) [![GitHub tag](https://img.shields.io/github/tag/atmauriz/didactic-octo-memory.svg)](https://GitHub.com/atmauriz/didactic-octo-memory/tags/) [![GitHub commits](https://img.shields.io/github/commits-since/atmauriz/didactic-octo-memory/v0.0.1.svg)](https://GitHub.com/atmauriz/didactic-octo-memory/commit/)
 
 
 ___
@@ -7,4 +7,5 @@ ___
 
 Test Automation based on Python
 
-Enjoy! Developped with love by @atmauriz
+Enjoy! 
+@atmauriz
