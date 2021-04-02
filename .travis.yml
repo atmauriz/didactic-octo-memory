@@ -1,0 +1,32 @@
+language: python
+os: linux
+dist: xenial
+python:
+  - "3.7"
+
+before_install:
+  - python -m pip install --upgrade pip
+install:
+  - python -m pip install -r requirements.txt
+
+jobs:
+  include:
+  - stage: Test
+    name: Unit Tests on Xenial Linux
+    script: skip
+  - script: skip
+    name: Integration Tests on Xenial Linux
+  - stage: Deploy
+    name: Deploy on TestPyPI index packages
+    script: skip
+    deploy:
+      provider: pypi
+      username: __token__
+      password:
+        secure: FLoAXTYHMxsQFfnXuLNEM4TYc9yVBXxkE2VTdWVqydDMlpojgbO7XwBJXw1rjtCgCNdBPQV3QyWZI+dL4EK/RBY0Q7xcjBqYbU21H5Xe4TB8X88z2H0coHLNZljwKWuLaWE9lAv8V9d/FqnKmKud+anMC8dk3qcjpYSo5w8ro3cv/lGBAatlRDzoWs4TpLnt3YrcHxexRFOOyyWnbuuRzsYTG5QDQa6ivJ9BDJ5NDTzG/yInX0csY81O1m6FjQE8uwYG0OGe1swqK5+L8LS3l1XZtoFofkOnFiijHU7n0MXmskDXsQMndTINXJG+YWt3xNiml9B9oiChFfymCrRBUrqkIw4H3aIGeio29+b7BL6eu0crpdxfxLEutaJFC0DFy3IfP6OKSs3HCWZ858f4I18y3ReLNywyWx1pG1xBtbgyRTT5vtJhmxM+uN1ONxqmE3ldeMlz0ssCXzPH/Y/LDMJHPbhSmk4Ar290QxBiUEBn65yHa9k3id7hOebub+0ZOedBUiw/9BF6CwBI0XVImcezhCOuiupCDk1vIVhS7wYKjKTu6p+PWZd8pAJiPlfVBzk+uSDYDECyWMZP9YT/qsUYMwX8PSVrPuuMxMz0yLbCuwDohq9ev7vB8OtdHwYffFMct/R4nQw4i4llfD+8mBFvTgEKYyElSPZ50jfwr88=
+      server: https://test.pypi.org/legacy/
+      distributions: "sdist bdist_wheel"
+      skip_existing: true
+      on:
+        tags: false
+        branch: master
