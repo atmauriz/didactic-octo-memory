@@ -13,9 +13,11 @@ jobs:
   include:
   - stage: Test
     name: Unit Tests on Xenial Linux
-    script: skip
-  - script: skip
+    script: pytest -m unit --disable-pytest-warnings
+  - script: pytest -m integration --disable-pytest-warnings
     name: Integration Tests on Xenial Linux
+  - script: pytest -m system --disable-pytest-warnings
+    name: System Tests on Xenial Linux
   - stage: Deploy
     name: Deploy on TestPyPI index packages
     script: skip
