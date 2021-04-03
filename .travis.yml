@@ -30,7 +30,7 @@ jobs:
       distributions: "sdist bdist_wheel"
       skip_existing: true
       on:
-        tags: true
+#        tags: true
         branch: master
     after_script:
       - bash ./telegram_notification.sh
