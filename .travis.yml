@@ -32,3 +32,10 @@ jobs:
       on:
         tags: true
         branch: master
+    after_deploy:
+      - bash ./telegram_notification.sh
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
