@@ -32,8 +32,9 @@ jobs:
       on:
         tags: true
         branch: master
-    after_deploy:
-      - bash ./telegram_notification.sh
+        
+after_script:
+  - bash ./telegram_notification.sh
 
 notifications:
   email:
