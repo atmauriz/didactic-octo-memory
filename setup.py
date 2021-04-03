@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="testfolder-atmauriz", # Replace with your own username
+    name="testfolder-atmauriz",  # Replace with your own username
     version="0.0.4",
     author="Maurizio Bussi",
     author_email="maurizio.bussi.mb@gmail.com",
@@ -21,7 +21,6 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir={"": "tf"},
-    packages=setuptools.find_packages(where="tf"),
+    packages=setuptools.find_packages(),
     python_requires=">=3.7",
 )
